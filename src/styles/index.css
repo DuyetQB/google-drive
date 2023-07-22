@@ -1,0 +1,19 @@
+h3 {
+    margin: 0;
+}
+
+.ant-layout-sider {
+    width: 256px !important;
+    flex: 0 0 256px !important; 
+    max-width: 256px !important; 
+    min-width: 256px !important;
+    background: #f7f9fc;
+}
+
+.ant-menu {
+    background:#f7f9fc ;
+    border: none;
+}
+.ant-layout {
+    background: #f7f9fc;
+}
