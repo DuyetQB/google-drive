@@ -5,9 +5,9 @@ import { Row ,Col } from "antd"
 const Content = () =>{
     return (
         <div className="p-4">
-            <Row gutter={24}>
+          
             <Card />
-            </Row>
+         
         </div>
     )
 }

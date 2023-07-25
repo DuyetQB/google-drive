@@ -17,3 +17,6 @@ h3 {
 .ant-layout {
     background: #f7f9fc;
 }
+.ant-dropdown {
+    width: 200px;
+}

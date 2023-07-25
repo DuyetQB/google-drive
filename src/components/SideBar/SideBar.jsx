@@ -49,6 +49,7 @@ function getItem(label, key, icon, children) {
    
   return (
     <Sider
+    style={{ width: 256 }}
     breakpoint="lg"
     collapsedWidth="0"
     onBreakpoint={(broken) => {
