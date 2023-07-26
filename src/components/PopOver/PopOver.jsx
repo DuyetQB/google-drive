@@ -1,35 +1,38 @@
-import { useState} from "react";
+import { useState } from "react";
 import { Dropdown, Menu } from "antd";
 import { IconDots, IconEdit } from "icons";
 import PopUpCanvas from "components/PopupCanvas/PopupCanvas";
 
-const MainPopOver = ({ imageUrl }) => {
+const MainPopOver = ({ imageInfor }) => {
+  const [isOpenPopUpCanvas, setIsOpenPopUpCanvas] = useState(false);
 
-  const [isOpenPopUpCanvas,setIsOpenPopUpCanvas] = useState(false);
-
-  const onClosePopup = () =>{
+  const onClosePopup = () => {
     setIsOpenPopUpCanvas(false);
-}
+  };
 
   const items = [
     {
-      label: 'Chỉnh Sửa',
-      key: '1',
+      label: "Chỉnh Sửa",
+      key: "1",
       icon: <IconEdit />,
       onClick: () => {
         setIsOpenPopUpCanvas(!isOpenPopUpCanvas);
       },
-    }
+    },
   ];
 
   return (
     <>
-    <Dropdown overlay={<Menu items={items} />} trigger={['click']}>
-      <a onClick={(e) => e.preventDefault()}>
-        <IconDots className="cursor-pointer" />
-      </a>
-    </Dropdown>
-    <PopUpCanvas isOpen={isOpenPopUpCanvas} imageUrl={imageUrl} onClose={onClosePopup}/>
+      <Dropdown overlay={<Menu items={items} />} trigger={["click"]}>
+        <a onClick={(e) => e.preventDefault()}>
+          <IconDots className="cursor-pointer" />
+        </a>
+      </Dropdown>
+      <PopUpCanvas
+        isOpen={isOpenPopUpCanvas}
+        imageInfor={imageInfor}
+        onClose={onClosePopup}
+      />
     </>
   );
 };
